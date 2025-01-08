@@ -1,0 +1,8 @@
+# Ignore everything by default
+*
+
+# Allow the target folder (which contains the built JAR file)
+!target/
+
+# Allow JAR files in the target folder
+!target/*.jar
