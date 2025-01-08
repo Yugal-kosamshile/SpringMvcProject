@@ -33,7 +33,7 @@ The project uses the following dependencies:
 
 4. Access the application in your browser at:
    ```
-   http://localhost:8081
+   http://localhost:8082
    ```
 
 5. Explore and manage products through the web interface.
