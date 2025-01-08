@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Product Details</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+
+</head>
+<body>
+	<nav>
+        <a th:href="@{/homepage}">Home</a>
+        <a th:href="@{/aboutus}">About</a>
+        <a th:href="@{/contactus}">Contact</a>
+    </nav>
+    <div class="success-container">
+		
+        <!-- Form Section -->
+        <div>
+            <h3 class="success-message">Search Product</h3>
+            <form th:action="@{/searchbyid}" method="post">
+                <label for="id">Enter ID:</label>
+                <input type="text" id="id" name="id" required />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <!-- Product Details Section -->
+        <div th:if="${product != null}">
+            <h3 class="success-message">Product Details</h3>
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Value</th>
+                </tr>
+                <tr>
+                    <td>ID</td>
+                    <td><span th:text="${product.id}"></span></td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td><span th:text="${product.name}"></span></td>
+                </tr>
+                <tr>
+                    <td>Brand</td>
+                    <td><span th:text="${product.brand}"></span></td>
+                </tr>
+                <tr>
+                    <td>Price</td>
+                    <td><span th:text="${product.price}"></span></td>
+                </tr>
+                <tr>
+                    <td>Quantity</td>
+                    <td><span th:text="${product.quantity}"></span></td>
+                </tr>
+                <tr>
+                    <td>Made In</td>
+                    <td><span th:text="${product.madeIn}"></span></td>
+                </tr>
+                <tr>
+                    <td>Discount Rate</td>
+                    <td><span th:text="${product.discountRate}"></span></td>
+                </tr>
+                <tr>
+                    <td>Discount Price</td>
+                    <td><span th:text="${product.discountPrice}"></span></td>
+                </tr>
+                <tr>
+                    <td>Offer Price</td>
+                    <td><span th:text="${product.offerPrice}"></span></td>
+                </tr>
+                <tr>
+                    <td>Final Price</td>
+                    <td><span th:text="${product.finalPrice}"></span></td>
+                </tr>
+                <tr>
+                    <td>Stock Value</td>
+                    <td><span th:text="${product.stockValue}"></span></td>
+                </tr>
+                <tr>
+                    <td>Tax Price</td>
+                    <td><span th:text="${product.taxPrice}"></span></td>
+                </tr>
+            </table>
+        </div>
+        <div th:if="${product == null}">
+            <p>No product found with the given ID.</p>
+        </div>
+    </div>
+	<footer>
+	        <p>&copy; 2024 My Product Management System | All Rights Reserved | <a th:href="@{/contactus}">Contact Us</a></p>
+	    </footer>
+</body>
+</html>

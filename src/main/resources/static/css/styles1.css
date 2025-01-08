@@ -1,0 +1,136 @@
+/* General Reset */
+body, h1, h2, p, a, form, label, input, textarea, button {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Styling */
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #3E5879; /* Muted Blue-Grey */
+    background-color: #F5EFE7; /* Light Beige */
+    margin: 0;
+}
+
+/* Header Styling */
+header {
+    background-color: #213555; /* Deep Blue */
+    color: #F5EFE7; /* Light Beige */
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+header nav {
+    margin-top: 0.5rem;
+}
+
+header nav a {
+    color: #F5EFE7; /* Light Beige */
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content Styling */
+main {
+    padding: 2rem;
+    background: #FFFFFF; /* Pure White for content background */
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styling */
+main section {
+    margin-bottom: 2rem;
+}
+
+main h2 {
+    font-size: 1.5rem;
+    color: #213555; /* Deep Blue */
+    margin-bottom: 1rem;
+}
+
+main h1 {
+    color: #213555; /* Deep Blue */
+    margin-bottom: 1rem;
+}
+
+main p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: #555; /* Neutral Grey for paragraph text */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #213555; /* Deep Blue for labels */
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #D8C4B6; /* Warm Beige for borders */
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    padding: 0.75rem;
+    background-color: #213555; /* Deep Blue for button */
+    color: #F5EFE7; /* Light Beige for text */
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3E5879; /* Muted Blue-Grey for hover */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #213555; /* Deep Blue */
+    color: #F5EFE7; /* Light Beige */
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #D8C4B6; /* Warm Beige for links */
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #3E5879; /* Muted Blue-Grey for hover */
+}
+
+footer p {
+    font-size: 0.875rem;
+}

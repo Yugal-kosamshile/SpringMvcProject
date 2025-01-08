@@ -1,0 +1,191 @@
+/* General Reset */
+    body, h1, h2, h3, p, a, table, th, td, nav, footer {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Body Styling */
+    body {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #3E5879; /* Muted Blue-Grey */
+        background-color: #F5EFE7; /* Light Beige */
+        padding: 20px;
+    }
+
+    /* Navigation Bar */
+    nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #213555; /* Deep Blue */
+        padding: 1rem;
+        margin-bottom: 20px;
+    }
+
+    nav a {
+        color: #F5EFE7; /* Light Beige */
+        text-decoration: none;
+        margin: 0 1rem;
+        font-weight: bold;
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    nav a:hover {
+        background-color: #3E5879; /* Muted Blue-Grey */
+        transform: scale(1.1);
+    }
+
+    nav a.active {
+        background-color: #D8C4B6; /* Neutral Beige */
+        color: #213555; /* Deep Blue */
+    }
+
+    /* Table Container */
+    .table-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #FFFFFF; /* White */
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .table-header {
+        color: #213555; /* Deep Blue */
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+        text-align: center;
+    }
+
+	    /* Button Styling */
+	    .btn {
+	        display: inline-block;
+	        padding: 10px 20px;
+	        font-size: 16px;
+	        color: #FFFFFF; /* White Text */
+	        background-color: #213555; /* Deep Blue */
+	        border: none;
+	        border-radius: 5px;
+	        text-decoration: none;
+	        text-align: center;
+	        cursor: pointer;
+	        transition: background-color 0.3s ease, transform 0.2s ease;
+	    }
+
+	    .btn:hover {
+	        background-color: #3E5879; /* Muted Blue-Grey */
+	        transform: translateY(-2px);
+	    }
+
+	    .btn:active {
+	        background-color: #3E5879; /* Muted Blue-Grey */
+	        transform: translateY(0);
+	    }
+
+	    /* Specific Button Classes */
+	    .btn.add {
+	        background-color: #213555; /* Deep Blue */
+	    }
+
+	    .btn.add:hover {
+	        background-color: #3E5879; /* Muted Blue-Grey */
+	    }
+
+	    .btn-delete {
+	        
+			background-color: #B8001F; /* Deep Blue */
+	    }
+
+	    .btn-delete:hover {
+	        background-color: #AE445A; /* Muted Blue-Grey */
+	    }
+	
+    /* Table Styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 20px;
+    }
+
+    table th, table td {
+        border: 1px solid #D8C4B6; /* Neutral Beige */
+        padding: 10px;
+        text-align: left;
+        font-size: 0.9rem;
+    }
+
+    table th {
+        background-color: #213555; /* Deep Blue */
+        color: #FFFFFF; /* White */
+        text-align: center;
+    }
+
+    table td {
+        text-align: center;
+        color: #3E5879;  
+    }
+
+    table tr:nth-child(even) {
+        background-color: #FFF7FC;  
+    }
+
+    table tr:hover {
+        background-color: #FFF7FC; 
+    }
+
+    /* Action Buttons */
+    .action-buttons .btn {
+        display: inline-block;
+        padding: 0.5rem 1rem;
+        margin: 0 5px;
+        font-size: 0.875rem;
+        text-decoration: none;
+        border-radius: 4px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+	.action-buttons {
+	    display: flex;
+	    justify-content: center; /* Center the buttons horizontally */
+	    align-items: center; /* Center the buttons vertically */
+	    gap: 10px; /* Add spacing between the buttons */
+	}
+
+	.action-buttons .btn {
+	    display: inline-block;
+	    padding: 0.5rem 1rem;
+	    margin: 0; /* Remove extra margins */
+	    font-size: 0.875rem;
+	    text-decoration: none;
+	    border-radius: 4px;
+	    transition: background-color 0.3s ease, transform 0.2s ease;
+	}
+
+    /* Footer Styling */
+    footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #213555; /* Deep Blue */
+        color: #F5EFE7; /* Light Beige */
+        margin-top: 2rem;
+        border-radius: 8px;
+    }
+
+    footer a {
+        color: #F5EFE7; /* Light Beige */
+        text-decoration: underline;
+    }
+
+    footer a:hover {
+        color: #D8C4B6; /* Neutral Beige */
+    }
+
+    footer p {
+        font-size: 0.875rem;
+    }

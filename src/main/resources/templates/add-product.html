@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add Product</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <nav>
+        <a th:href="@{/homepage}">Home</a>
+        <a th:href="@{/aboutus}">About</a>
+        <a th:href="@{/contactus}">Contact</a>
+    </nav>
+    <div class="form-container">
+        <h1 class="form-header">Add Product</h1>
+        <form th:action="@{/saveproduct}" th:method="post" th:object="${productModel}">
+            <div class="form-group">
+                <label for="name">Product Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter product name" th:value="*{name}">
+                <p class="error" th:if="${#fields.hasErrors('name')}" th:text="${#fields.errors('name')}"></p>
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand</label>
+                <input type="text" id="brand" name="brand" placeholder="Enter brand name" th:value="*{brand}">
+                <p class="error" th:if="${#fields.hasErrors('brand')}" th:text="${#fields.errors('brand')}"></p>
+            </div>
+            <div class="form-group">
+                <label for="madeIn">Made In</label>
+                <input type="text" id="madeIn" name="madeIn" placeholder="Enter manufacturing country" th:value="*{madeIn}">
+                <p class="error" th:if="${#fields.hasErrors('madeIn')}" th:text="${#fields.errors('madeIn')}"></p>
+            </div>
+            <div class="form-group">
+                <label for="price">Price</label>
+                <input type="number" id="price" name="price" placeholder="Enter price" step="0.01" th:value="*{price}">
+                <p class="error" th:if="${#fields.hasErrors('price')}" th:text="${#fields.errors('price')}"></p>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" placeholder="Enter quantity" th:value="*{quantity}">
+                <p class="error" th:if="${#fields.hasErrors('quantity')}" th:text="${#fields.errors('quantity')}"></p>
+            </div>
+            <div class="form-group">
+                <label for="discountRate">Discount Rate (%)</label>
+                <input type="number" id="discountRate" name="discountRate" placeholder="Enter discount rate" th:value="*{discountRate}">
+                <p class="error" th:if="${#fields.hasErrors('discountRate')}" th:text="${#fields.errors('discountRate')}"></p>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Product Management System | All Rights Reserved | <a th:href="@{/contactus}">Contact Us</a></p>
+    </footer>
+</body>
+</html>

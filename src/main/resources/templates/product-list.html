@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/list.css">
+    <title>Product List</title>
+</head>
+<body>
+	<nav>
+        <a th:href="@{/homepage}" >Home</a>
+        <a th:href="@{/aboutus}">About</a>
+        <a th:href="@{/contactus}">Contact</a>
+    </nav>
+    <div class="table-container">
+        <h1 class="table-header">Product List</h1>
+        <table>
+			<a th:href="@{/addproduct}"  class="btn btn-delete add">Add Product</a>
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Name</th>
+                    <th>Brand</th>
+                    <th>Made In</th>
+                    <th>Price</th>
+                    <th>Quantity</th>
+                    <th>Discount Rate</th>
+                    <th>Discount Price</th>
+                    <th>Offer Price</th>
+                    <th>Final Price</th>
+                    <th>Stock Value</th>
+                    <th>Tax Price</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="product : ${products}">
+                    <td th:text="${product.id}"></td>
+                    <td th:text="${product.name}"></td>
+                    <td th:text="${product.brand}"></td>
+                    <td th:text="${product.madeIn}"></td>
+                    <td th:text="${product.price}"></td>
+                    <td th:text="${product.quantity}"></td>
+                    <td th:text="${product.discountRate}"></td>
+                    <td th:text="${product.discountPrice}"></td>
+                    <td th:text="${product.offerPrice}"></td>
+                    <td th:text="${product.finalPrice}"></td>
+                    <td th:text="${product.stockValue}"></td>
+                    <td th:text="${product.taxPrice}"></td>
+                    <td>
+                        <div class="action-buttons">
+							
+                           <a th:href="@{'/edit/'+${product.id}}" class="btn btn-edit">Edit</a>
+						   <!--Delete the produc by id with @PathVariable-->
+							<a th:href="@{'/delete/'+${product.id}}" class="btn btn-delete">Delete</a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+	<footer>
+        <p>&copy; 2024 My Product Management System | All Rights Reserved | <a th:href="@{/contactus}">Contact Us</a></p>
+    </footer>
+</body>
+</html>

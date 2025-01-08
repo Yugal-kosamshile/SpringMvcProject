@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Success</title>
+	<style>
+	    body {
+	        font-family: Arial, sans-serif;
+	        text-align: center;
+	        margin-top: 50px;
+	        background-color: #F5EFE7; /* Light Beige */
+	        color: #3E5879; /* Muted Blue-Grey for default text */
+	    }
+	    .success-container {
+	        display: inline-block;
+	        padding: 20px;
+	        border: 2px solid #213555; /* Deep Blue */
+	        border-radius: 10px;
+	        background-color: #FFFFFF; /* Pure White */
+	        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for emphasis */
+	    }
+	    .success-icon {
+	        margin-bottom: 20px;
+	    }
+	    .success-message {
+	        color: #213555; /* Deep Blue */
+	        font-size: 24px;
+	        margin: 10px 0;
+	    }
+	    .success-description,
+	    .success-details {
+	        font-size: 16px;
+	        color: #3E5879; /* Muted Blue-Grey */
+	    }
+	    .btn {
+	        display: inline-block;
+	        margin-top: 20px;
+	        padding: 10px 20px;
+	        font-size: 16px;
+	        color: #F5EFE7; /* Light Beige for text */
+	        background-color: #213555; /* Deep Blue */
+	        border: none;
+	        border-radius: 5px;
+	        text-decoration: none;
+	        transition: background-color 0.3s ease;
+	    }
+	    .btn:hover {
+	        background-color: #3E5879; /* Muted Blue-Grey for hover */
+	    }
+	</style>
+
+</head>
+<body>
+    <div class="success-container">
+        <div class="success-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#4CAF50" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM6.697 11.243 4.354 8.9a.5.5 0 1 0-.708.707l2.646 2.646a.5.5 0 0 0 .708 0l6-6a.5.5 0 0 0-.708-.707L6.697 11.243z"/>
+            </svg>
+        </div>
+        <h1 class="success-message">Success!</h1>
+        <p class="success-description">Thank you for your submission</span>!</p>
+        <p class="success-details">We have received your email!</span>.</p>
+        <a th:href="@{/homepage}" class="btn">Go to Homepage</a>
+		<div class="btn-container">
+	          <a th:href="@{/getallproducts}" class="btn">See Product List</a>
+		 </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Welcome</title>
+	<link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <nav>
+        <a th:href="@{/homepage}" >Home</a>
+        <a th:href="@{/aboutus}">About</a>
+        <a th:href="@{/contactus}">Contact</a>
+		<a th:href="@{/getallproducts}">Product List</a>
+		<a th:href="@{/searchform}">Search Product</a>
+    </nav>
+    <div class="welcome-container">
+        <h1 class="welcome-message">Welcome to My Product Management System</h1>
+        <p class="welcome-description">
+            Easily manage and track your products with our system. Keep your inventory organized and up-to-date.
+        </p>
+        <div class="product-info">
+            <p>Our platform allows you to:</p>
+            <ul>
+                <li>Add new products with details like name, brand, price, and discount.</li>
+                <li>View and update existing product information.</li>
+                <li>Analyze your inventory with ease.</li>
+            </ul>
+            <p>Get started by filling out the product details or exploring other features using the navigation above.</p>
+        </div>
+        <div class="btn-container">
+            <a th:href="@{/addproduct}" class="btn">Add Product Information</a>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Product Management System | All Rights Reserved | <a th:href="@{/contactus}">Contact Us</a></p>
+    </footer>
+</body>
+</html>
