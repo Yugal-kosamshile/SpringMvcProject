@@ -14,6 +14,16 @@ body {
     background-color: #F5EFE7; /* Light Beige Background */
 }
 
+img {
+    width: 100px; /* Adjust the size of the logo */
+}
+
+.logo-container {
+    margin-right: auto; /* Pushes the logo to the left */
+    display: flex;
+    align-items: center;
+}
+
 nav {
     display: flex;  
     justify-content: center; 

@@ -25,6 +25,16 @@
         margin-bottom: 20px;
     }
 
+    
+img {
+    width: 100px; /* Adjust the size of the logo */
+}
+
+.logo-container {
+    margin-right: auto; /* Pushes the logo to the left */
+    display: flex;
+    align-items: center;
+}
     nav a {
         color: #F5EFE7; /* Light Beige */
         text-decoration: none;

@@ -6,9 +6,14 @@
 </head>
 <body>
     <nav>
-        <a th:href="@{/homepage}">Home</a>
-        <a th:href="@{/aboutus}">About</a>
-        <a th:href="@{/contactus}">Contact</a>
+        <div class="logo-container">
+            <a th:href="@{/homepage}"><img th:src="@{/images/logo.png}" alt="Logo"></a>
+        </div>
+        <div class="nav-links">
+            <a th:href="@{/homepage}">Home</a>
+            <a th:href="@{/aboutus}">About</a>
+            <a th:href="@{/contactus}">Contact</a>
+        </div>
     </nav>
     <div class="form-container">
         <h1 class="form-header">Edit Product</h1>
